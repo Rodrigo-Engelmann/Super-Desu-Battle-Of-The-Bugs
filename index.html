@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Desu: Battle Of The Bugs</title>
+    <script src="script.js" defer></script>
+
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+    <link rel="icon" href="/Assets/GabrieliconePágina.png" type="image/icon type">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="dinheiroTotal">
+        <img src="/Assets/moeda4.png" alt="dinheiro total">
+        <p id="dinheiroTotalText">0</p>
+    </div>
+
+
+    <div id="voltarMenu">
+        <p id="voltar-fases-menu">VOLTAR =></p>
+    </div>
+
+    <div id="menu">
+        <!--substituir por uma imagem com a logo do jogo ou só escolher um nome e colocar no lugar desse 'h1'-->
+        <img id="titulo1" src="/Assets/superDesu1.png" alt="titulo1">
+        <img id="titulo2" src="/Assets/superDesu2.png" alt="titulo2">
+        <h6>jogue com o zoom em 100%</h6>
+        <img id="jogar-botao" src="Assets/botaoJogar.png" alt="botãoJogar"></img>
+        <img id="loja-botao" src="Assets/botaoLoja.png" alt="botãoLoja"></img>
+
+        <img id="backgroundMenuPrincipal" src="/Assets/backgroundMenu.png" alt="fundoMenu">
+
+        <p>Produzido por: Rodrigo Engelmann (back-end e artes), João Pedro (artes), Henrique (artes) e Lorenzo Gall (artes)</p>
+    </div>
+
+    <div id="powerUps">
+        <img id="backgroundFundoLoja" src="Assets/fundo-loja.gif" alt="backgroundDaLoja">
+        
+        <div class="powerUps">
+            <div id="dash">
+                <div class="dash">
+                    <h1>Dash supersônico</h1>
+                    <p>Aumente a distância limite do seu dash!</p>
+                    <p id="nivelDash">Nível de powerUp: 0</p>
+                    <img id="moedaValorLoja" src="Assets/moeda4.png" alt="moeda parada">
+                    <h2 id="precoDash">30</h2>
+                    <img class="iconPowerUp" src="Assets/dashimg.png" alt="representaçãoVisualDash">
+                </div>
+            </div>
+
+            <div id="vida">
+                <div class="vida">
+                    <h1>Vida extra</h1>
+                    <p>Aumente em um a sua quantidade de corações</p>
+                    <p id="nivelVida">Nível de powerUp: 0</p>
+                    <img id="moedaValorLoja" src="Assets/moeda4.png" alt="moeda parada">
+                    <h2 id="precoVida">30</h2>
+                    <img class="iconPowerUp" src="Assets/vidaimg.png" alt="representaçãoVisualDash">
+                </div>
+            </div>
+
+            <div id="jornada">
+                <div class="jornada">
+                    <h1>Jornada do milhão</h1>
+                    <p>Aumente a quantidade de moedas e inimigos</p>
+                    <p id="nivelJornada">Nível de powerUp: 0</p>
+                    <img id="moedaValorLoja" src="Assets/moeda4.png" alt="moeda parada">
+                    <h2 id="precoJornada">30</h2>
+                    <img class="iconPowerUp" src="Assets/jornadadomilhaoimg.png" alt="representaçãoVisualDash">
+                </div>
+            </div>
+
+            <div id="bota">
+                <div class="bota">
+                    <h1>Bota com molas</h1>
+                    <p>Aumente o tamanho de seu salto</p>
+                    <p id="nivelBota">Nível de powerUp: 0</p>
+                    <img id="moedaValorLoja" src="Assets/moeda4.png" alt="moeda parada">
+                    <h2 id="precoBota">30</h2>
+                    <img class="iconPowerUp" src="Assets/puloimg.png" alt="representaçãoVisualDash">
+                </div>
+            </div>
+
+            <div id="velocidade">
+                <div class="velocidade">
+                    <h1>Velocidade de jogo</h1>
+                    <p>Diminua a velocidade da câmera do jogo</p>
+                    <p id="nivelVelocidade">Nível de powerUp: 0</p>
+                    <img id="moedaValorLoja" src="Assets/moeda4.png" alt="moeda parada">
+                    <h2 id="precoVelocidade">30</h2>
+                    <img class="iconPowerUp" src="Assets/velocidadeimg.png" alt="representaçãoVisualDash">
+                </div>
+            </div>
+
+            <div id="inseticida">
+                <div class="inseticida">
+                    <h1>Inseticida diluído</h1>
+                    <p>Diminui a velocidade dos inimigos</p>
+                    <p id="nivelInseticida">Nível de powerUp: 0</p>
+                    <img id="moedaValorLoja" src="Assets/moeda4.png" alt="moeda parada">
+                    <h2 id="precoInseticida">30</h2>
+                    <img class="iconPowerUp" src="Assets/inseticidaimg.png" alt="representaçãoVisualDash">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="lista-fases" class="lista-fases">
+        <img id="backgroundFases" src="/Assets/background fases.png" alt="background das fases em jogar">
+        <div id="lvl1" class="leveis">
+            <h1>FASE 1</h1>
+            <p>disponível</p>
+        </div>
+        
+        <div id="lvl2" class="leveis">
+            <h1>FASE 2</h1>
+            <img id="lvl2Img" src="Assets/moeda4.png" alt="moedaParada">
+            <p id="lvl2Text">30</p>
+        </div>
+
+        <div id="lvl3" class="leveis">
+            <h1>FASE 3</h1>
+            <img id="lvl3Img" src="Assets/moeda4.png" alt="moedaParada">
+            <p id="lvl3Text">150</p>
+        </div>
+        
+        <div id="lvl4" class="leveis">
+            <h1>FASE 4</h1>
+            <img id="lvl4Img" src="Assets/moeda4.png" alt="moedaParada">
+            <p id="lvl4Text">750</p>
+        </div>
+
+        <div id="lvl5" class="leveis">
+            <h1>FASE 5</h1>
+            <img id="lvl5Img" src="Assets/moeda4.png" alt="moedaParada">
+            <p id="lvl5Text">2.750</p>
+        </div>
+
+        <h3 id="texto-dicas">
+            Dicas de ouro:
+            <br>Use o mouse e seu botão esquerdo para dar dash em qualquer direção
+            <br>Esmague os inimigos pulando e pressionando "S" para receber mais moedas
+            <br>Compre os power-ups presente na loja para lucrar mais em cada rodada
+            <br>Tente durar mais tempo na rodada, pois cada vez caem mais moedas e inimigos do céu
+        </h3>
+    </div>
+
+
+    <div id="gameplay">
+        <div id="background"></div>
+
+        <div id="hud-coracao"></div>
+
+        <img id="sol" src="Assets/sol.png" alt="sol">
+
+        <img id="player" src="Assets/GabrielParado.png" alt="player-sprite"></img>
+            
+        <div id="floor"></div>
+        <div id="floor2"></div>
+        <div id="floor3"></div>
+
+        <img id="ilhaBackground" src="/Assets/ilha cenário jogo.png" alt="ilhaNoBackground">
+        <img id="navioBackground" src="Assets/pixil-frame-0_19.png" alt="navioNoBackground">
+
+
+
+        <div id="baixoFloor"></div>
+
+        <img id="imgmoeda-hud" src="/Assets/moeda4.png" alt="moeda parada pra hud-moedas">
+        <p id="hud-moedas">0</p>
+
+        <img id="seta" src="Assets/seta-dash.png" alt="seta-dash">
+
+        <h1 id="mensagemFinal"></h1>
+    </div>
+
+
+
+    <div id="fase1">
+        <div class="colisores" id="pedra1" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra2" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra3" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra4" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra5" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra6" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra7" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra8" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="colisorFinal" ><div class="fundoFloor"></div></div>
+    </div>
+
+    <div id="fase2">
+        <div class="colisores" id="pedra9" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra10" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra11" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra12" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra13" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra14" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra15" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra16" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="colisorFinal2" ><div class="fundoFloor"></div></div>
+    </div>
+
+    <div id="fase3">
+        <div class="colisores" id="pedra17" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra18" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra19" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra20" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra21" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra22" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra23" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra24" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra25" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra26" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="colisorFinal3" ><div class="fundoFloor"></div></div>
+    </div>
+    <div id="fase4">
+        <div class="colisores" id="pedra27" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra28" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra29" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra30" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra31" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra32" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra33" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra34" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra35" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra36" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra37" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra38" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra39" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra40" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="colisorFinal4" ><div class="fundoFloor"></div></div>
+    </div>
+    <div id="fase5">
+        <div class="colisores" id="pedra41" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra42" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra43" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra44" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra45" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra46" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra47" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra48" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra49" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra50" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra51" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra52" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra53" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra54" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra55" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra56" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra57" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="pedra58" ><div class="fundoFloor"></div></div>
+        <div class="colisores" id="colisorFinal5" ><div class="fundoFloor"></div></div>
+    </div>
+
+
+    <link rel="stylesheet" href="style.css">
+</body>
+</html>

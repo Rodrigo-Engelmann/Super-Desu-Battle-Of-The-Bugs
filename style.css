@@ -1,0 +1,1322 @@
+html, body {
+    overflow: hidden;
+    user-select: none;
+}
+
+img{
+    /*Aqui é pra não ser selecionável as imagens*/
+    user-select: none;
+    -drag: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+#sol{
+    position: absolute;
+    width: 15vw;
+    left: 20vw;
+    bottom: 15vw;
+    height: auto;
+    z-index: 0;
+}
+
+#ilhaBackground{
+    animation: animacaoIlha 100s infinite;
+    width: 30vw;
+    height: auto;
+    position: absolute;
+    bottom: 2vw;
+}
+
+@keyframes animacaoIlha {
+    from {
+      transform: translateX(100vw);
+    }
+    to {
+      transform: translateX(-100vw);
+    }
+}
+
+#navioBackground{
+    animation: animacaoNavio 120s infinite;
+    width: 20vw;
+    height: auto;
+    position: absolute;
+    bottom: 4vw;
+}
+
+@keyframes animacaoNavio {
+    from {
+      transform: translateX(-60vw);
+    }
+    to {
+      transform: translateX(100vw);
+    }
+}
+
+
+
+#voltar-fases-menu{
+    font-size: 2vw;
+    transition-duration: 0.2s;
+    position: absolute;
+    z-index: 2;
+    right: 0vw;
+    bottom: 0vw;
+}
+#voltar-fases-menu:hover{
+    font-size: 2.2vw;
+}
+
+
+*{
+    font-family: "Silkscreen", sans-serif;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+}
+
+  
+
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: "Silkscreen", sans-serif;
+    font-style: normal;
+}
+
+#texto-dicas{
+    position: absolute;
+    font-family: sans-serif;
+    right: 2vw;
+    top: 6vw;
+    width: 60vw;
+}
+
+.powerUps{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-top: 2.5vw;
+    margin-bottom: 20vw;
+}
+
+#backgroundFundoLoja{
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+}
+
+
+.dash, .vida, .jornada, .bota, .velocidade, .inseticida{
+    position: relative;
+    z-index: 2;
+    background-color: rgb(56, 76, 117);
+    border: 2vw ridge black;
+    cursor: pointer;
+    color: white;
+    transition-duration: 0.2s;
+    flex-direction: column;
+    height: 16.3vw;
+    width: 25vw;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    margin-top: 2vw;
+    h1{
+        margin-top: 1.2vw;
+        font-size: 2vw;
+    }
+    p{
+        margin-top: 1vw;
+        font-size: 0.8vw;
+    }
+    h2{
+        position: relative;
+        right: 2vw;
+        bottom: 6.5vw;
+        font-size: 4vw;
+    }
+}
+
+#moedaValorLoja{
+    width: 7vw;
+    height: auto;
+    position: relative;
+    bottom: 0.7vw;
+    left: 4vw;
+}
+
+.iconPowerUp{
+    width: 6vw;
+    height: auto;
+    position: absolute;
+    bottom: 0.7vw;
+    right: 0vw;
+}
+
+.dash:hover, .vida:hover, .jornada:hover, .bota:hover, .velocidade:hover, .inseticida:hover{
+    transform: scale(1.05);
+}
+
+
+
+#dinheiroTotal{
+    position: absolute;
+    z-index: 2;
+    top: 0vw;
+    p{
+        position: absolute;
+        left: 93.6vw;
+        top: 1.3vw;
+        color: black;
+        font-size: 2vw;
+    }
+    img{
+        position: absolute;
+        left: 90vw;
+        width: 5vw;
+        height: auto;
+    }
+}
+
+
+#mensagemFinal{
+    font-size: 5vw;
+    position: absolute;
+    left: 6vw;
+    top: 20vw;
+}
+
+
+.lista-fases{
+    display: flex;
+    flex-direction: row;
+    font-size: 2vw;
+    div{
+        position: relative;
+        z-index: 1;
+        margin: 1vw 2vw;
+        width: 20vw;
+        height: 8vw;
+        p{
+            font-size: 2vw;
+            position: relative;
+            bottom: 3vw;
+            left: 3vw;
+        }
+        img{
+            width: 3vw;
+        }
+    }
+}
+
+#backgroundFases{
+    position: absolute;
+    height: 100%;
+    width: auto;
+    z-index: 0;
+}
+
+#lvl1{
+    p{
+        position: relative;
+        bottom: 0vw;
+    }
+}
+
+.leveis{
+    border: ridge black;
+    background-color: rgb(209, 162, 75);
+    transition-duration: 0.05s;
+    width: 10vw;
+    height: 10vw;
+    cursor: pointer;
+}
+.leveis:hover{
+    transform: scale(1.05);
+}
+
+#titulo1{
+    position: absolute;
+    top: 0vw;
+    left: 20%;
+    z-index: 2;
+    width: 30vw;
+    height: auto;
+}
+#titulo2{
+    position: absolute;
+    top: 3vw;
+    left: 49%;
+    z-index: 2;
+    width: 40vw;
+    height: auto;
+}
+
+#menu{
+margin-top: 2vw;
+z-index: 2;
+    h6{
+        font-size: 1.4vw;
+        text-align: center;
+        margin-top: 1vw;
+        margin-bottom: 10vh;
+    }
+    p{
+        position: absolute;
+        font-size: 1.2vw;
+        bottom: 1vw;
+        left: 1vw;
+    }
+}
+
+#backgroundMenuPrincipal {
+    position: absolute;
+    z-index: 0;
+    width: auto;
+    height: 100%;
+    left: 0vw;
+    top: 0vw;
+}
+
+#jogar-botao{
+    margin-top: 10vw;
+    position: relative;
+    z-index: 2;
+    transition-duration: 0.2s;
+    margin-left: 37vw;
+    height: auto;
+    width: 25vw;
+}
+#jogar-botao:hover{
+    transform: scale(1.10);
+    box-shadow: 1vw 1vw 1vw rgba(0, 0, 0, 0.199);
+    cursor: pointer;
+}
+
+
+
+#loja-botao{
+    position: relative;
+    z-index: 2;
+    transition-duration: 0.2s;
+    margin-bottom: 10vw;
+    margin-left: 37vw;
+    margin-top: 3vw;
+    height: auto;
+    width: 25vw;
+}
+#loja-botao:hover{
+    transform: scale(1.10);
+    box-shadow: 1vw 1vw 1vw rgba(0, 0, 0, 0.199);
+    cursor: pointer;
+}
+
+
+
+
+
+
+#background{
+    background: linear-gradient(rgb(101, 101, 255), rgb(0, 195, 255), rgb(255, 166, 0));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#player{
+    position: absolute;
+    z-index: 91;
+    width: 4vw;
+    height: auto;
+}
+
+
+
+#floor{
+    background-image: url(Assets/ondaGif.gif);
+    background-size: 6vw;
+    opacity: 80%;
+    width: 100%;
+    height: 6vw;
+    position: absolute;
+    bottom: 10vh;
+    z-index: 0;
+}
+#floor2{
+    background-image: url(Assets/ondaGif.gif);
+    background-size: 6vw;
+    opacity: 80%;
+    width: 120%;
+    height: 6vw;
+    position: absolute;
+    bottom: 5vh;
+    left: -2vw;
+    z-index: 20000;
+}
+#floor3{
+    background-image: url(Assets/ondaGif.gif);
+    background-size: 6vw;
+    opacity: 80%;
+    width: 120%;
+    height: 6vw;
+    position: absolute;
+    bottom: 0vh;
+    left: -1vw;
+    z-index: 20000;
+}
+
+#baixoFloor{
+    background-color: rgb(52, 52, 139);
+    opacity: 80%;
+    width: 100%;
+    height: 20vw;
+    position: absolute;
+    top: 90vh;
+    z-index: 3000;
+}
+
+
+
+.moeda{
+    position: absolute;
+    z-index: 93;
+    width: 8vw;
+    height: auto;
+    bottom: 100vw;
+}
+
+#imgmoeda-hud{
+    position: absolute;
+    width: 7vw;
+    height: auto;
+    bottom: 89vh;
+    right: 9.5vw;
+    z-index: 20000;
+}
+
+#hud-moedas{
+    font-size: 4vw;
+    position: absolute;
+    bottom: 90.9vh;
+    color: white;
+    right: 5vw;
+    z-index: 2;
+    z-index: 20000;
+    /*font-family: 'Minecraft', sans-serif;*/
+}
+
+
+#seta{
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    left: 20vw;
+    z-index: 90;
+}
+
+
+
+.coracao{
+    width: 3vw;
+    height: 3vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-top: 0.5vw;
+    z-index: 123123;
+}
+
+
+#hud-coracao{
+    display: flex;
+    z-index: 2;
+}
+
+
+
+.inimigo{
+    position:absolute;
+    z-index: 92;
+    width: 5vw;
+    height: auto;
+}
+
+
+.inimigosAndantes{
+    position:absolute;
+    width: 5vw;
+    height: auto;
+}
+
+
+.nuvens{
+    position: absolute;
+    width: 20vw;
+    height: auto;
+}
+
+
+
+.fundoFloor {
+    width: 100%;
+    height: 30vh;
+    background-image: url(/Assets/terra-bloco.png);
+    background-size: 4vw;
+    position: absolute;
+    top: 3.9vw;
+}
+
+
+#pedra1{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 2vw;
+    bottom: 10vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+#pedra2{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+    position: absolute;
+
+    left: 53vw;
+    bottom: 14vw;
+
+    width: 20vw;
+    height: 4vw;
+}
+
+#pedra3{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 93vw;
+    bottom: 12vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+#pedra4{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 160vw;
+    bottom: 12vw;
+
+    width: 80vw;
+    height: 4vw;
+}
+
+#pedra5{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 255vw;
+    bottom: 12vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+#pedra6{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 320vw;
+    bottom: 12vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+#pedra7{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 340vw;
+    bottom: 12vw;
+
+    width: 20vw;
+    height: 4vw;
+}
+
+#pedra8{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 380vw;
+    bottom: 12vw;
+
+    width: 12vw;
+    height: 4vw;
+}
+
+
+#colisorFinal {
+    background-image: url(/Assets/chegada-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 410vw;
+    bottom: 14vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+
+
+
+
+/*SEGUNDA FASE */
+
+#pedra9{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 2vw;
+    bottom: 10vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+#pedra10{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 63vw;
+    bottom: 6vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+#pedra11{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 120vw;
+    bottom: 14vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+#pedra12{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 180vw;
+    bottom: 16vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+#pedra13{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+    position: absolute;
+
+    left: 255vw;
+    bottom: 18vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+#pedra14{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 320vw;
+    bottom: 12vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+#pedra15{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 340vw;
+    bottom: 12vw;
+
+    width: 60vw;
+    height: 4vw;
+}
+
+#pedra16{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 430vw;
+    bottom: 12vw;
+
+    width: 12vw;
+    height: 4vw;
+}
+
+
+#colisorFinal2 {
+    background-image: url(/Assets/chegada-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 470vw;
+    bottom: 14vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+
+
+/*TERCEIRA FASE */
+
+#pedra17{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 2vw;
+    bottom: 10vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+#pedra18{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 63vw;
+    bottom: 18vw;
+
+    width: 32vw;
+    height: 4vw;
+}
+
+#pedra19{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 130vw;
+    bottom: 14vw;
+
+    width: 32vw;
+    height: 4vw;
+}
+
+#pedra20{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 180vw;
+    bottom: 16vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+#pedra21{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 255vw;
+    bottom: 18vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+#pedra22{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 320vw;
+    bottom: 12vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+#pedra23{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 340vw;
+    bottom: 12vw;
+
+    width: 32vw;
+    height: 4vw;
+}
+
+#pedra24{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 400vw;
+    bottom: 18vw;
+
+    width: 12vw;
+    height: 4vw;
+}
+
+#pedra25{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 430vw;
+    bottom: 18vw;
+
+    width: 12vw;
+    height: 4vw;
+}
+
+
+#pedra26{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 460vw;
+    bottom: 18vw;
+
+    width: 12vw;
+    height: 4vw;
+}
+
+
+
+#colisorFinal3 {
+    background-image: url(/Assets/chegada-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 510vw;
+    bottom: 14vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+
+
+/*QUARTA FASE */
+
+#pedra27{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 2vw;
+    bottom: 10vw;
+
+    width: 20vw;
+    height: 4vw;
+}
+
+#pedra28{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 43vw;
+    bottom: 18vw;
+
+    width: 20vw;
+    height: 4vw;
+}
+
+#pedra29{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 80vw;
+    bottom: 14vw;
+
+    width: 20vw;
+    height: 4vw;
+}
+
+#pedra30{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 110vw;
+    bottom: 16vw;
+
+    width: 20vw;
+    height: 4vw;
+}
+
+#pedra31{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 135vw;
+    bottom: 18vw;
+
+    width: 28vw;
+    height: 4vw;
+}
+
+#pedra32{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 170vw;
+    bottom: 12vw;
+
+    width: 20vw;
+    height: 4vw;
+}
+
+#pedra33{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 210vw;
+    bottom: 12vw;
+
+    width: 28vw;
+    height: 4vw;
+}
+
+#pedra34{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 250vw;
+    bottom: 18vw;
+
+    width: 28vw;
+    height: 4vw;
+}
+
+#pedra35{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 290vw;
+    bottom: 16vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+
+#pedra36{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 330vw;
+    bottom: 12vw;
+
+    width: 12vw;
+    height: 4vw;
+}
+
+#pedra37{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 370vw;
+    bottom: 18vw;
+
+    width: 20vw;
+    height: 4vw;
+}
+
+#pedra38{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 410vw;
+    bottom: 18vw;
+
+    width: 20vw;
+    height: 4vw;
+}
+
+#pedra39{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 440vw;
+    bottom: 18vw;
+
+    width: 20vw;
+    height: 4vw;
+}
+
+#pedra40{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 470vw;
+    bottom: 12vw;
+
+    width: 20vw;
+    height: 4vw;
+}
+
+
+#colisorFinal4 {
+    background-image: url(/Assets/chegada-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 510vw;
+    bottom: 14vw;
+
+    width: 40vw;
+    height: 4vw;
+}
+
+
+
+
+
+/*QUINTA FASE */
+
+#pedra41{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 2vw;
+    bottom: 10vw;
+
+    width: 20vw;
+    height: 4vw;
+}
+
+#pedra42{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 38vw;
+    bottom: 12vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+#pedra43{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 64vw;
+    bottom: 14vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+#pedra44{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 90vw;
+    bottom: 16vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+#pedra45{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 126vw;
+    bottom: 18vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+#pedra46{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 152vw;
+    bottom: 18vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+#pedra47{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 178vw;
+    bottom: 18vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+#pedra48{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 209vw;
+    bottom: 18vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+#pedra49{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 235vw;
+    bottom: 18vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+
+#pedra50{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 261vw;
+    bottom: 18vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+#pedra51{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 287vw;
+    bottom: 18vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+#pedra52{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 318vw;
+    bottom: 18vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+#pedra53{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 344vw;
+    bottom: 18vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+#pedra54{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 370vw;
+    bottom: 18vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+#pedra55{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 404vw;
+    bottom: 18vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+#pedra56{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 437vw;
+    bottom: 18vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+#pedra57{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 471vw;
+    bottom: 18vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+#pedra58{
+    background-image: url(/Assets/grama-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 505vw;
+    bottom: 18vw;
+
+    width: 16vw;
+    height: 4vw;
+}
+
+
+#colisorFinal5 {
+    background-image: url(/Assets/chegada-bloco.png);
+    background-size: 4vw;
+
+    position: absolute;
+
+    left: 540vw;
+    bottom: 12vw;
+
+    width: 40vw;
+    height: 4vw;
+}
